@@ -1,0 +1,32 @@
+root    R
+label   eKor eKor
+label   sak sak
+label   wKyu wKyu
+label   westJ westJ
+label   iso iso
+label   mry mry
+edge    a1 R eKor
+edge    a2 R x
+edge    a3 x anssak
+edge    a4 anssak anssak1 
+edge    a5 anssak anssak2
+admix anssak3 anssak2 ansiso2
+edge    a6 anssak3 sak
+edge    b1 x y
+edge    b2 y answKyu
+edge    b3 answKyu answKyu2
+edge    b4 answKyu wKyu
+edge    b6 y zz
+edge    b6 zz answestJ
+edge    b7 answestJ answestJ2
+edge    b8 answestJ answestJ3
+admix answestJ4 answestJ3 answKyu2
+admix answestJ6 answestJ4 anssak1
+edge    c1 answestJ6 westJ
+edge    c2 zz anseastJ
+edge    c3 anseastJ anseastJ2
+edge    c4 anseastJ ansiso
+edge    c6 ansiso ansiso2
+edge    c7 ansiso iso
+admix anseastJ3 anseastJ2 answestJ2
+edge    c8 anseastJ3 mry

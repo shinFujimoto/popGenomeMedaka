@@ -1,0 +1,18 @@
+root    R
+label   eKor eKor
+label   wKyu wKyu
+label   westJ westJ
+label   iso iso
+label   mry mry
+label   sak sak
+
+edge    a1 R eKor
+edge    a4 R x
+edge    a6 x sak
+edge    b1 x y
+edge    b2 y wKyu
+edge    b5 y z
+edge    b6 z westJ
+edge    c3 z eastJ
+edge    c3 eastJ iso
+edge    c3 eastJ mry
