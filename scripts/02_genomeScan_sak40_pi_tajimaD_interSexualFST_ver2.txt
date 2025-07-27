@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------------------------------------------
+# tajimaD_perform.txt
+# 2022/01/04
+# update:2023/10/24
+# Tajima's D calculation
+# ---------------------------------------------------------------------------------------------------
+# 1-1, O. sakaizumii intrapopulation variation dataset, with no missing and include invariant site dataset
+# ----------------------------------------------------------------------------------------------
+outputDIR="/home/shifujimoto/medakaWGStmp/populationStat/genomescan"
+mergeSampleList=" /home/shifujimoto/medakaWGStmp/populationStat/vcf_qcfilter/sampleList_wgs_sak_40samples.txt"
+
+# filtered VCF files made in populationStructure script
+# missing rate = 0%  and invariant site, exclude indel and multi allelic sites
+cd /home/shifujimoto/medakaWGStmp/populationStat/vcf_qcfilter
+cat chromosomeNameList.txt | xargs -n1 -P24 -I{} sh -c \
+ "bcftools merge -l $mergeSampleList -r {} \
+ | bcftools view -i 'N_MISSING=0' \
+ | bcftools view -e 'ALT=\"*\"' \
+ | bcftools view --max-alleles 2 | bgzip -@ 4 -c > $outputDIR/tmp_{}_merged.vcf.gz"
+
+cd $outputDIR
+ls -v | grep "_merged.vcf.gz$" | grep "tmp" > tmpFileLsit.txt
+bcftools concat -f tmpFileLsit.txt | bgzip -@ 12 -c > medakaWGS_sak40samples_snpsQC_invariant_exIndelMultialleic.vcf.gz
+tabix -f medakaWGS_sak40samples_snpsQC_invariant_exIndelMultialleic.vcf.gz
+
+# --------------------------------------------------------------------------------------------------
+# 1-2. Pi and Intersexual FST calculation using pixy
+# O. sak(Tsuruga(16), Niigata(8), Aomori(8), Kitatsugaru(8), N=40)
+# ----------------------------------------------------------------------------------------------
+cd $outputDIR
+mkdir ./pixy_out
+inputVCF="medakaWGS_sak40samples_snpsQC_invariant_exIndelMultialleic.vcf.gz"
+conda activate pixyEnv
+
+pixy --stats pi \
+--vcf $inputVCF \
+--n_cores 48 \
+--bypass_invariant_check yes \
+--window_size 50000 \
+--populations ./pixy_out/popfile_sakaizumii_pixy.txt \
+--chunk_size 500000 \
+--output_folder ./pixy_out/medakaWGS_sak40_pi &
+
+
+# intersexual fst
+pixy --stats fst \
+--vcf $inputVCF \
+--n_cores 36 \
+--bypass_invariant_check yes \
+--window_size 50000 \
+--populations ./pixy_out/popfile_sakaizumii_intersfst_pixy.txt \
+--chunk_size 500000 \
+--output_folder ./pixy_out/medakaWGS_sak40_intersfst &
+
+# --------------------------------------------------------------------------------------------------
+# 1-3. Tajima's D with 50000bp interval
+# O. sak(Tsuruga(16), Niigata(8), Aomori(8), Kitatsugaru(8), N=40),
+# vcf-kit, ver.0.2.6: https://github.com/AndersenLab/VCF-kit
+# --------------------------------------------------------------------------------------------------
+# make the pop file
+# extract the all sample names
+inputVCF="medakaWGS_sak40samples_snpsQC_invariant_exIndelMultialleic.vcf.gz"
+popName="sakaizumii"
+bcftools query $inputVCF -l > $outputDIR/tajimaD/popfile_${popName}_tajima.txt
+
+# calculate tajima's D
+# conda config --add channels bioconda
+# conda config --add channels conda-forge
+# conda create -n vcfkit \
+#  danielecook::vcf-kit=0.2.6 \
+#  "bwa>=0.7.17" \
+#  "samtools>=1.10" \
+#  "bcftools>=1.10" \
+#  "blast>=2.2.31" \
+#  "muscle>=3.8.31" \
+#  "primer3>=2.5.0"
+
+cd $outputDIR/tajimaD
+
+conda activate vcfkit
+windowSize='50000'
+vk tajima $windowSize $windowSize ../$inputVCF > $outputDIR/tajimaD/TajimaD_50000bp_${popName}_tajima.txt
+conda deactivate  vcfkit
+
+
+

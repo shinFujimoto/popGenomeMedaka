@@ -1,0 +1,61 @@
+# ----------------------------------------------------------------------------------
+# haplotypeEstimation_selscan_EHH_iHS
+# 
+# Shapeit -> pos-cM convert script  -> selscan
+# Authore: Shingo Fujimoto
+# Date: 2024/10/04
+# Update: 2024/10/21, Calculate FST per site
+# ----------------------------------------------------------------------------------
+vcfDIR="/home/shifujimoto/medakaWGStmp/populationStat/genomescan/dxy_lat42_sak40"
+inputVCCF="medakaWGS_sak40_lat42_snpsQC_invariant.vcf.gz"
+cd /home/shifujimoto/medakaWGStmp/populationStat/genomescan
+
+# -------------------------------------------------------------
+# 1. Phasing VCF, O. sak (N = 40), O. lat (N = 24), using Shapeit
+# -------------------------------------------------------------
+# invariant -> only variant
+# bcftools view -m2 -M2 -v snps -c 1:minor \
+#  medakaWGS_sak40samples_snpsQC_invariant_exIndelMultialleic_nmiss0.vcf.gz | \
+#  bgzip -c -@ 12 > ./selscan/sak40samples_snpsQC_exIndelMultialleic_nmiss0.vcf.gz
+# tabix ./selscan/sak40samples_snpsQC_exIndelMultialleic_nmiss0.vcf.gz
+
+# unphased VCF -> phased VCF
+cat chromosomeNameList.txt | while read line
+do
+ phase_common_static --input ./dxy_lat24_sak40/tmp_dxy_lat24_sak40_snps.vcf.gz \
+ -R $line \
+ --output ./selscan/sak40lat24_snps_${line}_phased.bcf \
+ --thread 4 --log ./selscan/sak40lat24_snps_${line}_phased.log &
+done
+
+# -------------------------------------------------------------
+# 2. iHS calculated using selscan
+# -------------------------------------------------------------
+
+# latipes 24個体をvcf から除外して、O. sakaizumii 内でbiallelic snp を抽出
+# selscan が chromosome 単位での解析を要求するため、分割して実行
+cat chromosomeNameList.txt | while read line
+do
+ bcftools view ./selscan/sak40lat24_snps_${line}_phased.bcf \
+ -S ./shpaeit2_LDhelmet/selscan_sak40.ind \
+ -m2 -M2 -v snps -c 1:minor > ./selscan/sak40_biallelic_snps_${line}_phased.bcf
+
+ # output the snp physical position
+ bcftools query -f '%CHROM\t%POS\n' \
+   ./selscan/sak40_biallelic_snps_${line}_phased.bcf >  ./selscan/sak40_biallelic_snps_${line}_phased_position.txt
+ # convert physical to centimorgan (1M bp / 1cM)
+ Rscript ./selscan/convert_1Mbp_pos_1cM.R ./selscan/sak40_biallelic_snps_${line}_phased_position.txt
+done
+
+cat chromosomeNameList.txt | while read line
+do
+ # selective sweep detection using selescan
+ selscan --ihs \
+  --vcf ./selscan/sak40_biallelic_snps_${line}_phased.bcf.gz \
+  --map ./selscan/sak40_biallelic_snps_${line}_phased_position_cM_pos.map \
+  --out ./selscan/sak40_biallelic_snps_${line}
+done
+
+cd selscan
+ls -1 | grep "ihs.out$" | grep -v "allchr" | xargs  cat > sak40_biallelic_snps_allchr.ihs.out
+
