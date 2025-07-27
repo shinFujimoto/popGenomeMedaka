@@ -7,8 +7,8 @@
 # ----------------------------------------------------------------
 library("tidyverse")
 
-setwd("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl")
-setwd("C:/users/fujim/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl")
+setwd("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl")
+setwd("C:/users/fujim/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl")
 
 # import the gene annotation table modified by Orthofinder one-to-one ortholog
 hni_hdrR_geneDF <- read.csv("sak40_pi_tajimaD_sexFst_F_d/Table_S2_HNI_HdrR_gene_annotation_ortholog.csv")
