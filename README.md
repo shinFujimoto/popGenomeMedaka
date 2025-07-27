@@ -8,8 +8,8 @@ and genome scans to explore the selection signature
 
 # Data accessibility statement
 Raw sequence reads are deposited in the DDBJ Sequence Read Archive (DRA) database  
-(BioProject: PRJDB20255, Not currently available). 
-Individual genotype data (VCF) are available on Dryad (Not currently available).
+(BioProject: PRJDB20255, Not currently available).  
+Individual genotype data (VCF) are available on Dryad (Not currently available).  
 
 # Author
 Shingo Fujimoto (Integrated Technology Center, University of the Ryukyus)  
