@@ -1,0 +1,8 @@
+genotypename:    medakaWGS_HSOK_sak_lat_33samples.bed
+snpname:         medakaWGS_HSOK_sak_lat_33samples.bim
+indivname:       medakaWGS_HSOK_sak_lat_33samples.fam
+outputformat:    EIGENSTRAT
+genotypeoutname: medakaWGS_HSOK_sak_lat_33samples.geno
+snpoutname:      medakaWGS_HSOK_sak_lat_33samples.snp
+indivoutname:    medakaWGS_HSOK_sak_lat_33samples.ind
+familynames:     NO
