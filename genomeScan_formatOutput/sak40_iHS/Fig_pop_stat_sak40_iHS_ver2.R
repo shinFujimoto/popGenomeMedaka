@@ -10,9 +10,9 @@
 library("tidyverse")
 library("ggplot2")
 library("MASS")
-#setwd("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
-setwd("C:/Users/fujim//GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
-#setwd("/mnt/d/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
+#setwd("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
+setwd("C:/Users/fujim//GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
+#setwd("/mnt/d/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
 source("formatting_output/scripts/population_statistics_summary.R") # self-made functions
 
 # ------------------------------------------------------------------------------
@@ -107,7 +107,7 @@ iHS_summaryDF <- function(x)
 }
 
 # Calculate iHS snps in Fd outlier regions
-fdRegion <- read.table("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak8_HSOK_latWJ8EJ8_F_d/genomescan_windows_sak8_HSOK_latWJ8EJ8_F_d.bed")
+fdRegion <- read.table("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak8_HSOK_latWJ8EJ8_F_d/genomescan_windows_sak8_HSOK_latWJ8EJ8_F_d.bed")
 as.data.frame(t(sapply(1:length(fdRegion$V1), function(x) { iHS_summaryDF(fdRegion[x,]) })))
 
 # Concatenate some regions within 1M base pairs
@@ -121,7 +121,7 @@ tempChrRegion <- data.frame(V1 = 21, V2 = 18275900, V3 = 18285814)
 iHS_summaryDF(tempChrRegion)
 
 # Calculate Pi, Tajimas's D, intersexual FST, outiler regions
-popstatRegion <- read.table("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak40_pi_tajimaD_sexFst_F_d/genomescan_windows_sak40_pi_tajimaD_sexFst_Fd_summaryWindow.txt")
+popstatRegion <- read.table("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak40_pi_tajimaD_sexFst_F_d/genomescan_windows_sak40_pi_tajimaD_sexFst_Fd_summaryWindow.txt")
 as.data.frame(t(sapply(1:length(popstatRegion$V1), function(x) { iHS_summaryDF(popstatRegion[x,]) })))
 
 # chr1 
