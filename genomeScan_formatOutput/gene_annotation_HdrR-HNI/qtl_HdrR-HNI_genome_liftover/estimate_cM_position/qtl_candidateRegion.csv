@@ -1,0 +1,7 @@
+Strain,CHROM,cM_start,cM_end,cM95CI_start,cM95CI_end,TraitName,Marker_start_name,Marker_end_name
+AFOM,12,0,40,0,38,Standard length,OL_C12_6679666,OL_C12_27205023
+AFOM,20,22,71,39,58,Frequency in quick circle,OL_C20_14446184,OL_C20_23089271
+AFOM,20,22,71,38,43,Frequency in approaching,OL_C20_14446184,OL_C20_23089271
+OFAM,13,8,28,16,27,Spawning latency,OL_C13_7805614,OL_C13_16637072
+OFAM,18,0,30,2,25,Spawning latency,OL_C18_2283919,OL_C18_12717230
+OFAM,23,18,53,33,48,Egg number,OL_C23_11864777,OL_C23_22762718

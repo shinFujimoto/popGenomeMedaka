@@ -1,0 +1,44 @@
+# -----------------------------------------------------------------------------
+# Old reference genome of oryzias latipes, Hd-rR liftover to the new HdrR genome
+# to compare the QTL analysis result
+# Author: Shingo Fujimoto
+# 
+# 2023/11/13, HdrR old reference convert to HdrR new reference
+# -----------------------------------------------------------------------------
+# Reference genome information
+# -----------------------------------------------------------------------
+# Oryzias latipes MEDAKA1(old ver.): https://jul2018.archive.ensembl.org/Oryzias_latipes/Info/Index?db=core
+# genomic sequence:ftp://ftp.ensembl.org/pub/release-93/fasta/oryzias_latipes/dna/Oryzias_latipes.MEDAKA1.dna.toplevel.fa.gz
+#
+# ASM223467v1 (new ver.):
+# genome sequence:http://ftp.ensembl.org/pub/release-105/fasta/oryzias_latipes/dna/Oryzias_latipes.ASM223467v1.dna.toplevel.fa
+# -----------------------------------------------------------------------
+
+# set the working directory
+scripts="/home/shifujimoto/processedSequence/medakaWGS/datasets/flo_HdrR_to_HNI/scripts"
+reference="/home/shifujimoto/processedSequence/medakaWGS/datasets/flo_HdrR_to_HNI/reference"
+tmp="/home/shifujimoto/processedSequence/medakaWGS/datasets/flo_HdrR_to_HNI/tmp"
+
+cd $tmp
+
+# -----------------------------------------------------------------------------
+mkdir HdrR_sanger_HdrR_pacBio
+cd HdrR_sanger_HdrR_pacBio
+
+workDIR="/home/shifujimoto/processedSequence/medakaWGS/datasets/flo_HdrR_to_HNI/tmp/HdrR_sanger_HdrR_pacBio" # WSL2配下のディレクトリで作業
+
+# flo_opts.yaml was manually changed
+cd $workDIR
+cp ${scripts}/flo/opts_example.yaml flo_opts.yaml
+
+
+# install the flo dependencies
+# ${scripts}/flo/scripts/install.sh
+
+cd $workDIR
+rake -f ${scripts}/flo/Rakefile
+
+# genomic position converted byliftOver
+$workDIR/ext/kent/bin/liftOver ./liftoverQTL/qtl_marker.bed \
+ ./run/liftover.chn ./liftoverQTL/HdrR_sanger_to_HdrR_pacBio_OFAM_AFOM.bed \
+ ./liftoverQTL/unMapped_OFAM_AFOM -minMatch=0.97
