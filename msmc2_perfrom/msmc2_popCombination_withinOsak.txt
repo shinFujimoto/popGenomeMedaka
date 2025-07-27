@@ -1,0 +1,7 @@
+#pop1	pop2	loc1	loc2	ind1	ind2	ind3	ind4
+O_sak1	O_sak2	Ktg	Kwb	ktg-f1	ktg-m1	kwb-f1	kwb-m1
+O_sak1	O_sak2	Ktg	Nig	ktg-f1	ktg-m1	Nig-f1	Nig-m1
+O_sak1	O_sak2	Ktg	Trg	ktg-f1	ktg-m1	Trg-f2	Trg-m1
+O_sak1	O_sak2	Kwb	Nig	kwb-f1	kwb-m1	Nig-f1	Nig-m1
+O_sak1	O_sak2	Kwb	Trg	kwb-f1	kwb-m1	Trg-f2	Trg-m1
+O_sak1	O_sak2	Nig	Trg	Nig-f1	Nig-m1	Trg-f2	Trg-m1

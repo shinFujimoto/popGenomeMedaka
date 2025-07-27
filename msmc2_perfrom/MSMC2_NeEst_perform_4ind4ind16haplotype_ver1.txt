@@ -1,0 +1,161 @@
+# ---------------------------------------------------------------
+# MSMC2 installation and performed
+# 
+# Date: 2023/05/22
+# Author: Shingo Fujimoto
+# ---------------------------------------------------------------
+# 1. インストール
+# ---------------------------------------------------------------
+# ローカルマシン上にインストール、以下のディレクトリを作成してバイナリを設置
+cd /home/shifujimoto/library
+mkdir MSMC2
+cd MSMC2
+wget https://github.com/stschiff/msmc2/releases/download/v2.0.0/msmc_2.0.0_linux64bit
+chmod 755 msmc_2.0.0_linux64bit # 実行権限を設定
+mv msmc_2.0.0_linux64bit msmc2
+git clone https://github.com/stschiff/msmc-tools.git # msmc-toolsをインストール
+
+# PATHの通った場所に実行ファイルをコピーする
+cp msmc2 /home/shifujimoto/.local/bin
+cd msmc-tools
+cp *.py /home/shifujimoto/.local/bin
+cp run_shapeit.sh /home/shifujimoto/.local/bin
+
+# shapeit2 をインストール
+wget https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.v2.r904.glibcv2.12.linux.tar.gz
+tar -zxvf shapeit.v2.r904.glibcv2.12.linux.tar.gz
+cp shapeit.v2.904.2.6.32-696.18.7.el6.x86_64/bin/shapeit /home/shifujimoto/.local/bin
+
+# SNPable でマスク領域を作成する
+cd /home/shifujimoto/library
+wget https://lh3lh3.users.sourceforge.net/download/seqbility-20091110.tar.bz2
+tar -jxvf seqbility-20091110.tar.bz2
+cd seqbility-20091110
+make
+
+# 作成されたバイナリを移動
+cp gen_raw_mask.pl /home/shifujimoto/.local/bin
+cp gen_mask /home/shifujimoto/.local/bin
+cp apply_mask_l /home/shifujimoto/.local/bin
+cp apply_mask_s /home/shifujimoto/.local/bin
+cp splitfa /home/shifujimoto/.local/bin
+
+# ---------------------------------------------------------------
+# 2. Make the SNPable masked region
+# https://lh3lh3.users.sourceforge.net/snpable.shtml
+# ---------------------------------------------------------------
+cd /home/shifujimoto/processedSequence/medakaWGS/datasets/refHNI/output/msmc2
+mkdir snpable
+cd snpable
+
+# reference genome of OryCel
+reference='/home/shifujimoto/processedSequence/medakaWGS/datasets/genome/HNIgenome/GCA_002234715.1_ASM223471v1_genomic.fna'
+
+splitfa $reference 35 | split -l 20000000
+cat x* > simu_reads.fq
+
+bwa aln -R 1000000 -O 3 -E 3 -t 12 $reference simu_reads.fq > simu_reads.sai
+bwa samse -f simu_reads_split.sam $reference simu_reads.sai simu_reads.fq > simu_reads.sam
+samtools view simu_reads_split.sam | gen_raw_mask.pl > rawMask_35.fa
+gen_mask -l 35 -r 0.5 rawMask_35.fa > mask_35_50.fa
+
+# script in msmsc-tools, fasta -> bed
+# the path modified in following script makeMappabilityMask.py
+# /home/shifujimoto/processedSequence/sulawesiAdrianichthysAdmix/datasets/msmc2/snpable/mask_35_50.fa
+# required, python2 series
+makeMappabilityMask.py
+
+# 3. BAM → concensus fasta → non-phased vcf
+# ---------------------------------------------------------------
+# bam file in the directory
+bamDIR='/home/shifujimoto/medakaWGStmp/bqsr'
+maskDIR='/home/shifujimoto/medakaWGStmp/msmc2/snpable'
+reference='/home/shifujimoto/medakaWGStmp/genome/HNIgenome/GCA_002234715.1_ASM223471v1_genomic.fna'
+
+cd /home/shifujimoto/medakaWGStmp/msmc2
+
+#mkdir msmc2input
+cd msmc2input
+# convert the vcf for each chromosome 
+# CP020779.1, CP020780.1, CP020781.1, CP020782.1, CP020783.1, CP020784.1, CP020785.1, CP020786.1, CP020787.1
+# CP020788.1, CP020789.1, CP020790.1, CP020791.1, CP020792.1, CP020793.1, CP020794.1, CP020795.1, CP020796.1
+# CP020797.1, CP020798.1, CP020799.1, CP020800.1, CP020801.1, CP020802.1
+cat ./bamFileList_incAdd.txt | while read bamName
+ do
+ samtools index $bamDIR/$bamName &
+done
+
+cat chrNameList.txt | while read line
+do
+ mkdir $line
+ # 各bam fileごとの実行処理
+ cat ./bamFileList_incAdd.txt | while read bamName
+ do
+   # calculate mean depth in the BAM file
+   meanDPValue=`samtools depth -@ 12 -r $line $bamDIR/$bamName | awk '{sum += $3} END {print sum / NR}'`
+   # make the vcf file, bcftools ver.1.18
+   bcftools mpileup -q 20 -Q 20 -C 50 -r $line -f $reference $bamDIR/$bamName \
+   | bcftools call -c -V indels \
+   | bamCaller.py $meanDPValue $line/${bamName%.bam}_${line}_mask.bed.gz \
+   | gzip -c > $line/${bamName%.bam}_${line}.vcf.gz
+ done
+done
+
+# MSMC用のmultiheterosep.txtに変換
+# 2024/06/16, に再計算 (2 ind vs. 2 ind, 4hap vs. 4hap)
+awk '!/^#/' msmc2_popCombination.txt | while read -a line; do
+ # population and individual names
+ pop1Name=${line[0]} # population1 name
+ pop2Name=${line[1]} # population2 name
+ loc1Name=${line[2]} # Location1 in population1 name
+ loc2Name=${line[3]} # Location2 in population2 name
+ # individul name of VCF and BED
+ ind1Name=${line[4]} # individual1 in population1 name
+ ind2Name=${line[5]} # individual2 in population1 name
+ ind3Name=${line[6]} # individual3 in population2 name
+ ind4Name=${line[7]} # individual4 in population2 name
+
+ # output directory for multihetsep files
+ DIRname="${pop1Name}_${pop2Name}-${loc1Name}_${loc2Name}"
+ mkdir $DIRname
+ 
+ chrNum=1
+ cat ./chrNameList.txt | while read chrName; do
+ generate_multihetsep.py --chr $chrNum \
+    --mask $chrName/${ind1Name}_refHNI_recal_${chrName}_mask.bed.gz --mask $chrName/${ind2Name}_refHNI_recal_${chrName}_mask.bed.gz  \
+    --mask $chrName/${ind3Name}_refHNI_recal_${chrName}_mask.bed.gz --mask $chrName/${ind4Name}_refHNI_recal_${chrName}_mask.bed.gz \
+    --mask ../snpable/mask_mappability_${chrName}.mask.bed.gz \
+    $chrName/${ind1Name}_refHNI_recal_${chrName}.vcf.gz $chrName/${ind2Name}_refHNI_recal_${chrName}.vcf.gz  \
+    $chrName/${ind3Name}_refHNI_recal_${chrName}.vcf.gz $chrName/${ind4Name}_refHNI_recal_${chrName}.vcf.gz  \
+    > ./$DIRname/$chrName.multihetsep.txt &
+
+  # 染色体番号をインクリメント
+  echo $((chrNum++));
+ done
+done
+
+# MSMC2 calculation using 4 individuals, 8 haplotypes
+awk '!/^#/' msmc2_popCombination.txt | while read -a line; do
+ # population and individual names
+ pop1Name=${line[0]} # population1 name
+ pop2Name=${line[1]} # population2 name
+ loc1Name=${line[2]} # Location1 in population1 name
+ loc2Name=${line[3]} # Location2 in population2 name
+ # individul name of VCF and BED
+ ind1Name=${line[4]} # individual1 in population1 name
+ ind2Name=${line[5]} # individual2 in population1 name
+ ind3Name=${line[6]} # individual3 in population2 name
+ ind4Name=${line[7]} # individual4 in population2 name
+
+ # output directory for multihetsep files
+ DIRname="${pop1Name}_${pop2Name}-${loc1Name}_${loc2Name}"
+ OUTDIR="/home/shifujimoto/medakaWGStmp/msmc2/msmc2input/${DIRname}"
+ cd $OUTDIR
+ echo ${DIRname}
+ msmc2 -t 24 -I 0,1,2,3 -s -p 1*2+15*1+1*2 -o $OUTDIR/within1.msmc2 CP020779.1.multihetsep.txt CP020780.1.multihetsep.txt CP020781.1.multihetsep.txt CP020782.1.multihetsep.txt CP020783.1.multihetsep.txt CP020784.1.multihetsep.txt CP020785.1.multihetsep.txt CP020786.1.multihetsep.txt CP020787.1.multihetsep.txt CP020788.1.multihetsep.txt CP020789.1.multihetsep.txt CP020790.1.multihetsep.txt CP020791.1.multihetsep.txt CP020792.1.multihetsep.txt CP020793.1.multihetsep.txt CP020794.1.multihetsep.txt CP020795.1.multihetsep.txt CP020796.1.multihetsep.txt CP020797.1.multihetsep.txt CP020798.1.multihetsep.txt CP020799.1.multihetsep.txt CP020800.1.multihetsep.txt CP020801.1.multihetsep.txt CP020802.1.multihetsep.txt &
+ msmc2 -t 24 -I 4,5,6,7 -s -p 1*2+15*1+1*2 -o $OUTDIR/within2.msmc2 CP020779.1.multihetsep.txt CP020780.1.multihetsep.txt CP020781.1.multihetsep.txt CP020782.1.multihetsep.txt CP020783.1.multihetsep.txt CP020784.1.multihetsep.txt CP020785.1.multihetsep.txt CP020786.1.multihetsep.txt CP020787.1.multihetsep.txt CP020788.1.multihetsep.txt CP020789.1.multihetsep.txt CP020790.1.multihetsep.txt CP020791.1.multihetsep.txt CP020792.1.multihetsep.txt CP020793.1.multihetsep.txt CP020794.1.multihetsep.txt CP020795.1.multihetsep.txt CP020796.1.multihetsep.txt CP020797.1.multihetsep.txt CP020798.1.multihetsep.txt CP020799.1.multihetsep.txt CP020800.1.multihetsep.txt CP020801.1.multihetsep.txt CP020802.1.multihetsep.txt &
+ msmc2 -t 24 -I 0-4,0-5,0-6,0-7,1-4,1-5,1-6,1-7,2-4,2-5,2-6,2-7,3-4,3-5,3-6,3-7 -s -p 1*2+15*1+1*2 -o $OUTDIR/across.msmc2  CP020779.1.multihetsep.txt CP020780.1.multihetsep.txt CP020781.1.multihetsep.txt CP020782.1.multihetsep.txt CP020783.1.multihetsep.txt CP020784.1.multihetsep.txt CP020785.1.multihetsep.txt CP020786.1.multihetsep.txt CP020787.1.multihetsep.txt CP020788.1.multihetsep.txt CP020789.1.multihetsep.txt CP020790.1.multihetsep.txt CP020791.1.multihetsep.txt CP020792.1.multihetsep.txt CP020793.1.multihetsep.txt CP020794.1.multihetsep.txt CP020795.1.multihetsep.txt CP020796.1.multihetsep.txt CP020797.1.multihetsep.txt CP020798.1.multihetsep.txt CP020799.1.multihetsep.txt CP020800.1.multihetsep.txt CP020801.1.multihetsep.txt CP020802.1.multihetsep.txt &
+ wait
+ combineCrossCoal.py  $OUTDIR/across.msmc2.final.txt $OUTDIR/within1.msmc2.final.txt $OUTDIR/within2.msmc2.final.txt > $OUTDIR/combined.msmc2.final.txt
+done
+
