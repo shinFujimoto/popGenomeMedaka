@@ -1,0 +1,29 @@
+PLINK v2.00a3 64-bit (17 Feb 2020)
+Options in effect:
+  --allow-extra-chr
+  --autosome-num 24
+  --make-bed
+  --out medakaWGS_HSOK_sak_lat_33samples
+  --set-all-var-ids @_#_$r_$a
+  --vcf medakaWGS_HSOK_sak_lat_33samples_snps_qcFilter_rename.vcf.gz
+
+Hostname: pjcmed
+Working directory: /home/shifujimoto/medakaWGStmp/populationStat/admixtools
+Start time: Fri Jul 19 03:10:10 2024
+
+Random number seed: 1721358610
+515574 MiB RAM detected; reserving 257787 MiB for main workspace.
+Using up to 128 threads (change this with --threads).
+--vcf: 10287244 variants scanned.
+--vcf: medakaWGS_HSOK_sak_lat_33samples-temporary.pgen +
+medakaWGS_HSOK_sak_lat_33samples-temporary.pvar +
+medakaWGS_HSOK_sak_lat_33samples-temporary.psam written.
+33 samples (0 females, 0 males, 33 ambiguous; 33 founders) loaded from
+medakaWGS_HSOK_sak_lat_33samples-temporary.psam.
+10287244 variants loaded from medakaWGS_HSOK_sak_lat_33samples-temporary.pvar.
+Note: No phenotype data present.
+Writing medakaWGS_HSOK_sak_lat_33samples.fam ... done.
+Writing medakaWGS_HSOK_sak_lat_33samples.bim ... done.
+Writing medakaWGS_HSOK_sak_lat_33samples.bed ... done.
+
+End time: Fri Jul 19 03:10:36 2024
