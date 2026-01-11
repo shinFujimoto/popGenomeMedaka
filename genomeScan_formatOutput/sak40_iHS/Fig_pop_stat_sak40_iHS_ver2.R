@@ -10,16 +10,17 @@
 library("tidyverse")
 library("ggplot2")
 library("MASS")
-#setwd("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
-setwd("C:/Users/fujim//GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
-#setwd("/mnt/d/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
-source("formatting_output/scripts/population_statistics_summary.R") # self-made functions
+#setwd("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
+setwd("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/deposit_Dryad_20251112-")
+#setwd("C:/Users/fujim//GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
+#setwd("/mnt/d/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
+source("scripts/population_statistics_summary.R") # self-made functions
 
 # ------------------------------------------------------------------------------
 # 1, import iHS dataset (calculated by selscan)
 # ------------------------------------------------------------------------------
 # iHS table
-iHSDF <- read.table("raw_output/selscan_iHS/iHS_selscan/sak40_biallelic_snps_allchr.ihs.out", header = FALSE)
+iHSDF <- read.table("Fig2-3_genomeScan_rawOutput/selscan_iHS/sak40_biallelic_snps_allchr_withpmap.ihs.out", header = FALSE)
 names(iHSDF) <- c("locus", "physPOS", "1_freq", "ihh_1", "ihh_0", "ihs")
 
 # Z-transform of iHS
@@ -34,13 +35,13 @@ pvalue_ihs <- pnorm(z_trans_ihs, mean = fitParam$estimate[1], sd = fitParam$esti
 
 # Outlier of z_trans_ihs
 N <- length(z_trans_ihs) # Total number of SNPs
-iHS_threshold <- sort(z_trans_ihs)[c(0.005*N, 0.995*N)] # Thresholds of outlier
+iHS_threshold <- sort(z_trans_ihs)[c(0.0025*N, 0.9975*N)] # Thresholds of outlier (lower and upper 0.5%)
 
 # Extract and output the outlier iHS, SNPs
 chrNum <- as.numeric(factor(substr(iHSDF$locus, 1, 10)))
 iHSDF <- cbind(iHSDF, z_trans_ihs, pvalue_ihs, chrNum)
 outlier_iHSDF <- filter(iHSDF, z_trans_ihs < iHS_threshold[1] | z_trans_ihs > iHS_threshold[2])
-outputFileName <- "formatting_output/sak40_lat42_iHS/O_sak40_lat42_iHS_outlier.csv"
+outputFileName <- "Fig2-3_genomeScan_formatOutput/sak40_iHS/O_sak40_iHS_outlier_05percentile.csv"
 write.csv(outlier_iHSDF, file = outputFileName, row.names = FALSE)
 
 # Figure plot for iHS
@@ -57,9 +58,9 @@ g <- rbind(g1, g1, g1, g1, g1,  size = "first")
 g$widths = grid::unit.pmax(g1$widths, g1$widths, g1$widths, g1$widths, g1$widths)
 plot(g)
 
-outputDIR <- paste0(getwd(), "/formatting_output/sak40_lat42_iHS")
-ggsave(filename = paste0(outputDIR, "/genomeScan_sak40_lat42_iHS.png"), g, width = 8, height = 8)
-ggsave(filename = paste0(outputDIR, "/genomeScan_sak40_lat42_iHS.pdf"), g, width = 8, height = 8)
+outputDIR <- paste0(getwd(), "/Fig2-3_genomeScan_formatOutput/sak40_iHS")
+ggsave(filename = paste0(outputDIR, "/genomeScan_sak40_lat42_iHS_05percentile.png"), g, width = 8, height = 8)
+ggsave(filename = paste0(outputDIR, "/genomeScan_sak40_lat42_iHS_05percentile.pdf"), g, width = 8, height = 8)
 
 
 # extract n SNPs in a chromosomal region
@@ -106,8 +107,10 @@ iHS_summaryDF <- function(x)
   }
 }
 
-# Calculate iHS snps in Fd outlier regions
-fdRegion <- read.table("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak8_HSOK_latWJ8EJ8_F_d/genomescan_windows_sak8_HSOK_latWJ8EJ8_F_d.bed")
+# ----------------------------------------------------------
+# Calculate iHS snps in Fd outlier regions (Table. 2)
+# ----------------------------------------------------------
+fdRegion <- read.table("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak8_HSOK_latWJ8EJ8_F_d/genomescan_windows_sak8_HSOK_latWJ8EJ8_F_d.bed")
 as.data.frame(t(sapply(1:length(fdRegion$V1), function(x) { iHS_summaryDF(fdRegion[x,]) })))
 
 # Concatenate some regions within 1M base pairs
@@ -121,24 +124,39 @@ tempChrRegion <- data.frame(V1 = 21, V2 = 18275900, V3 = 18285814)
 iHS_summaryDF(tempChrRegion)
 
 # Calculate Pi, Tajimas's D, intersexual FST, outiler regions
-popstatRegion <- read.table("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan/formatting_output/gene_Info_ensembl/sak40_pi_tajimaD_sexFst_F_d/genomescan_windows_sak40_pi_tajimaD_sexFst_Fd_summaryWindow.txt")
-as.data.frame(t(sapply(1:length(popstatRegion$V1), function(x) { iHS_summaryDF(popstatRegion[x,]) })))
-
-# chr1 
 tempChrRegion <- data.frame(V1 = 1, V2 = 16050001, V3 = 16650000)
 iHS_summaryDF(tempChrRegion)
-tempChrRegion <- data.frame(V1 = 23, V2 = 14885667, V3 = 16241702)
+tempChrRegion <- data.frame(V1 = 8, V2 = 14350001, V3 = 14400000)
+iHS_summaryDF(tempChrRegion)
+tempChrRegion <- data.frame(V1 = 10, V2 = 13750001, V3 = 13900000)
+iHS_summaryDF(tempChrRegion)
+tempChrRegion <- data.frame(V1 = 10, V2 = 13850001, V3 = 13900000)
 iHS_summaryDF(tempChrRegion)
 
 tempChrRegion <- data.frame(V1 = 18, V2 = 4250001, V3 = 4300000)
 iHS_summaryDF(tempChrRegion)
-
-tempChrRegion <- data.frame(V1 = 18, V2 = 6850001, V3 = 6950000)
+tempChrRegion <- data.frame(V1 = 18, V2 = 6850001, V3 = 6900000)
 iHS_summaryDF(tempChrRegion)
-
+tempChrRegion <- data.frame(V1 = 18, V2 = 6900001, V3 = 6950000)
+iHS_summaryDF(tempChrRegion)
 tempChrRegion <- data.frame(V1 = 18, V2 = 17800001, V3 = 17850000)
 iHS_summaryDF(tempChrRegion)
+tempChrRegion <- data.frame(V1 = 18, V2 = 26450001, V3 = 26500000)
+iHS_summaryDF(tempChrRegion)
 
+tempChrRegion <- data.frame(V1 = 19, V2 = 6750001, V3 = 6800000)
+iHS_summaryDF(tempChrRegion)
+
+tempChrRegion <- data.frame(V1 = 20, V2 = 21300001, V3 = 21350000)
+iHS_summaryDF(tempChrRegion)
+
+
+tempChrRegion <- data.frame(V1 = 23, V2 = 14885667, V3 = 16241702)
+iHS_summaryDF(tempChrRegion)
+
+
+
+# ----------------------------------------------------------
 
 # 
 candidateRegions <- read.table("clipboard", header = TRUE, sep = "\t")
