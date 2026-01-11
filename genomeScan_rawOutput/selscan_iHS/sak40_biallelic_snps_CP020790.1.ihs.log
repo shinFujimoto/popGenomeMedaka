@@ -1,0 +1,124 @@
+selscan --ihs --vcf ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020790.1_phased.bcf --map ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020790.1_phased_position_cM_pos.map --pmap --out ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020790.1 
+v2.0.2
+Calculating  iHS.
+Input filename: ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020790.1_phased.bcf
+Map filename: ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020790.1_phased_position_cM_pos.map
+Output file: ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020790.1.ihs.out
+Threads: 1
+Scale parameter: 20000
+Max gap parameter: 200000
+EHH cutoff value: 0.05
+Phased: yes
+Alt flag set: no
+--skip-low-freq set. Removing all variants < 0.05.
+Removed 15622 low frequency variants.
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 34228 id: CP020790.1_34228
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 38996 id: CP020790.1_38996
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 73281 id: CP020790.1_73281
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 78237 id: CP020790.1_78237
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 81911 id: CP020790.1_81911
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 88071 id: CP020790.1_88071
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 97894 id: CP020790.1_97894
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 145899 id: CP020790.1_145899
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 150117 id: CP020790.1_150117
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 206282 id: CP020790.1_206282
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 220559 id: CP020790.1_220559
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 222085 id: CP020790.1_222085
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 223828 id: CP020790.1_223828
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 223991 id: CP020790.1_223991
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 224902 id: CP020790.1_224902
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 226882 id: CP020790.1_226882
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 228998 id: CP020790.1_228998
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 237812 id: CP020790.1_237812
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 237878 id: CP020790.1_237878
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 251150 id: CP020790.1_251150
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 310657 id: CP020790.1_310657
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 369236 id: CP020790.1_369236
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 374319 id: CP020790.1_374319
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 457560 id: CP020790.1_457560
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 526475 id: CP020790.1_526475
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 526620 id: CP020790.1_526620
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 529295 id: CP020790.1_529295
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 530372 id: CP020790.1_530372
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 558565 id: CP020790.1_558565
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 595052 id: CP020790.1_595052
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 896507 id: CP020790.1_896507
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 896526 id: CP020790.1_896526
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27455041 id: CP020790.1_27455041
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27475070 id: CP020790.1_27475070
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27550881 id: CP020790.1_27550881
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27560243 id: CP020790.1_27560243
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27564044 id: CP020790.1_27564044
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27571082 id: CP020790.1_27571082
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27572114 id: CP020790.1_27572114
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27572235 id: CP020790.1_27572235
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27572375 id: CP020790.1_27572375
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27581041 id: CP020790.1_27581041
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27611120 id: CP020790.1_27611120
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27659639 id: CP020790.1_27659639
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27662644 id: CP020790.1_27662644
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27690987 id: CP020790.1_27690987
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27701849 id: CP020790.1_27701849
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27704853 id: CP020790.1_27704853
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27707503 id: CP020790.1_27707503
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27710492 id: CP020790.1_27710492
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27721030 id: CP020790.1_27721030
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27723463 id: CP020790.1_27723463
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27734107 id: CP020790.1_27734107
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27734109 id: CP020790.1_27734109
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27734119 id: CP020790.1_27734119
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27741427 id: CP020790.1_27741427
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27741575 id: CP020790.1_27741575
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27743113 id: CP020790.1_27743113
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27744751 id: CP020790.1_27744751
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27748078 id: CP020790.1_27748078
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27749675 id: CP020790.1_27749675
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27749690 id: CP020790.1_27749690
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27749960 id: CP020790.1_27749960
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27755134 id: CP020790.1_27755134
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27761586 id: CP020790.1_27761586
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27761644 id: CP020790.1_27761644
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27766062 id: CP020790.1_27766062
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27766171 id: CP020790.1_27766171
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27772139 id: CP020790.1_27772139
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27796959 id: CP020790.1_27796959
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27798973 id: CP020790.1_27798973
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27807928 id: CP020790.1_27807928
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27823629 id: CP020790.1_27823629
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27843820 id: CP020790.1_27843820
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27862719 id: CP020790.1_27862719
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27862722 id: CP020790.1_27862722
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 27978900 id: CP020790.1_27978900
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28019542 id: CP020790.1_28019542
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28020829 id: CP020790.1_28020829
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28030265 id: CP020790.1_28030265
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28032139 id: CP020790.1_28032139
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28038527 id: CP020790.1_28038527
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28077105 id: CP020790.1_28077105
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28086469 id: CP020790.1_28086469
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28103616 id: CP020790.1_28103616
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28103830 id: CP020790.1_28103830
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28103860 id: CP020790.1_28103860
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28103937 id: CP020790.1_28103937
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28103990 id: CP020790.1_28103990
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28107774 id: CP020790.1_28107774
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28108108 id: CP020790.1_28108108
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28117715 id: CP020790.1_28117715
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28125221 id: CP020790.1_28125221
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28144119 id: CP020790.1_28144119
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28149264 id: CP020790.1_28149264
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28156625 id: CP020790.1_28156625
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28181696 id: CP020790.1_28181696
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28209529 id: CP020790.1_28209529
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28211158 id: CP020790.1_28211158
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28212576 id: CP020790.1_28212576
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28213129 id: CP020790.1_28213129
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28215021 id: CP020790.1_28215021
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28226015 id: CP020790.1_28226015
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28230053 id: CP020790.1_28230053
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28230576 id: CP020790.1_28230576
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28236290 id: CP020790.1_28236290
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28237013 id: CP020790.1_28237013
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28240191 id: CP020790.1_28240191
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28243460 id: CP020790.1_28243460
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 28244997 id: CP020790.1_28244997

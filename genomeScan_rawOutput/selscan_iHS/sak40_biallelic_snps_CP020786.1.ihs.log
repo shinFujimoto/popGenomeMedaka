@@ -1,0 +1,442 @@
+selscan --ihs --vcf ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020786.1_phased.bcf --map ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020786.1_phased_position_cM_pos.map --pmap --out ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020786.1 
+v2.0.2
+Calculating  iHS.
+Input filename: ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020786.1_phased.bcf
+Map filename: ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020786.1_phased_position_cM_pos.map
+Output file: ./selscan/sak40lat24_withoutRmap_20251112/sak40_biallelic_snps_CP020786.1.ihs.out
+Threads: 1
+Scale parameter: 20000
+Max gap parameter: 200000
+EHH cutoff value: 0.05
+Phased: yes
+Alt flag set: no
+--skip-low-freq set. Removing all variants < 0.05.
+Removed 13206 low frequency variants.
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 46226 id: CP020786.1_46226
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 46655 id: CP020786.1_46655
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 92126 id: CP020786.1_92126
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 92754 id: CP020786.1_92754
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 95667 id: CP020786.1_95667
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 98405 id: CP020786.1_98405
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 99952 id: CP020786.1_99952
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 110762 id: CP020786.1_110762
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 111327 id: CP020786.1_111327
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 111367 id: CP020786.1_111367
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 113826 id: CP020786.1_113826
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 119361 id: CP020786.1_119361
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 119380 id: CP020786.1_119380
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 119435 id: CP020786.1_119435
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 127110 id: CP020786.1_127110
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 128683 id: CP020786.1_128683
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 146188 id: CP020786.1_146188
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 149522 id: CP020786.1_149522
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 150886 id: CP020786.1_150886
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 151131 id: CP020786.1_151131
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 151271 id: CP020786.1_151271
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 151861 id: CP020786.1_151861
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 195756 id: CP020786.1_195756
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 195776 id: CP020786.1_195776
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 201813 id: CP020786.1_201813
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 201814 id: CP020786.1_201814
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 209531 id: CP020786.1_209531
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 337835 id: CP020786.1_337835
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 338006 id: CP020786.1_338006
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 388153 id: CP020786.1_388153
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 388201 id: CP020786.1_388201
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 388457 id: CP020786.1_388457
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 440583 id: CP020786.1_440583
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 499543 id: CP020786.1_499543
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 500143 id: CP020786.1_500143
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 527586 id: CP020786.1_527586
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 538819 id: CP020786.1_538819
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 539089 id: CP020786.1_539089
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 544286 id: CP020786.1_544286
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 552084 id: CP020786.1_552084
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 555413 id: CP020786.1_555413
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 568447 id: CP020786.1_568447
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 568469 id: CP020786.1_568469
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 581830 id: CP020786.1_581830
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 587220 id: CP020786.1_587220
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 587622 id: CP020786.1_587622
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 588772 id: CP020786.1_588772
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 591899 id: CP020786.1_591899
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 594323 id: CP020786.1_594323
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 594369 id: CP020786.1_594369
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 602754 id: CP020786.1_602754
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 610483 id: CP020786.1_610483
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 658024 id: CP020786.1_658024
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 675569 id: CP020786.1_675569
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 689837 id: CP020786.1_689837
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 721764 id: CP020786.1_721764
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 728748 id: CP020786.1_728748
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 746689 id: CP020786.1_746689
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 771049 id: CP020786.1_771049
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 792678 id: CP020786.1_792678
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 886120 id: CP020786.1_886120
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 901131 id: CP020786.1_901131
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 901141 id: CP020786.1_901141
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 901142 id: CP020786.1_901142
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 937131 id: CP020786.1_937131
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 970803 id: CP020786.1_970803
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 1036915 id: CP020786.1_1036915
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12360042 id: CP020786.1_12360042
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12630059 id: CP020786.1_12630059
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12630061 id: CP020786.1_12630061
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12690001 id: CP020786.1_12690001
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12936207 id: CP020786.1_12936207
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12954338 id: CP020786.1_12954338
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12954976 id: CP020786.1_12954976
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12982796 id: CP020786.1_12982796
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 12984074 id: CP020786.1_12984074
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13003443 id: CP020786.1_13003443
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13004276 id: CP020786.1_13004276
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13020200 id: CP020786.1_13020200
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13023088 id: CP020786.1_13023088
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13030993 id: CP020786.1_13030993
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13041528 id: CP020786.1_13041528
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13042246 id: CP020786.1_13042246
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13042768 id: CP020786.1_13042768
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13061461 id: CP020786.1_13061461
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13071466 id: CP020786.1_13071466
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13087225 id: CP020786.1_13087225
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13087866 id: CP020786.1_13087866
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13091356 id: CP020786.1_13091356
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13100891 id: CP020786.1_13100891
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13100960 id: CP020786.1_13100960
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13102258 id: CP020786.1_13102258
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13104709 id: CP020786.1_13104709
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13105333 id: CP020786.1_13105333
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13106413 id: CP020786.1_13106413
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13106699 id: CP020786.1_13106699
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13107107 id: CP020786.1_13107107
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13109587 id: CP020786.1_13109587
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13109595 id: CP020786.1_13109595
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13110381 id: CP020786.1_13110381
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13110385 id: CP020786.1_13110385
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13112214 id: CP020786.1_13112214
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13115464 id: CP020786.1_13115464
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13115690 id: CP020786.1_13115690
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13136522 id: CP020786.1_13136522
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13136523 id: CP020786.1_13136523
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13136826 id: CP020786.1_13136826
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13137234 id: CP020786.1_13137234
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13140993 id: CP020786.1_13140993
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13141235 id: CP020786.1_13141235
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13143755 id: CP020786.1_13143755
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13145697 id: CP020786.1_13145697
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13145698 id: CP020786.1_13145698
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13145791 id: CP020786.1_13145791
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13146725 id: CP020786.1_13146725
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13147509 id: CP020786.1_13147509
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13149001 id: CP020786.1_13149001
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13159467 id: CP020786.1_13159467
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13172706 id: CP020786.1_13172706
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13174986 id: CP020786.1_13174986
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13177144 id: CP020786.1_13177144
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13178310 id: CP020786.1_13178310
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13178586 id: CP020786.1_13178586
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13178630 id: CP020786.1_13178630
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13187036 id: CP020786.1_13187036
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13191795 id: CP020786.1_13191795
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13192969 id: CP020786.1_13192969
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13194866 id: CP020786.1_13194866
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13195010 id: CP020786.1_13195010
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13195013 id: CP020786.1_13195013
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13195140 id: CP020786.1_13195140
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13195207 id: CP020786.1_13195207
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13198884 id: CP020786.1_13198884
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13201184 id: CP020786.1_13201184
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13201736 id: CP020786.1_13201736
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13203757 id: CP020786.1_13203757
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13203846 id: CP020786.1_13203846
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13204151 id: CP020786.1_13204151
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13205727 id: CP020786.1_13205727
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13206619 id: CP020786.1_13206619
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13207963 id: CP020786.1_13207963
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13209543 id: CP020786.1_13209543
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13209794 id: CP020786.1_13209794
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13210828 id: CP020786.1_13210828
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13215180 id: CP020786.1_13215180
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13215377 id: CP020786.1_13215377
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13220088 id: CP020786.1_13220088
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13233675 id: CP020786.1_13233675
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13236904 id: CP020786.1_13236904
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13237021 id: CP020786.1_13237021
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13237045 id: CP020786.1_13237045
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13240097 id: CP020786.1_13240097
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13240148 id: CP020786.1_13240148
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13240271 id: CP020786.1_13240271
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13245070 id: CP020786.1_13245070
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13249537 id: CP020786.1_13249537
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13255248 id: CP020786.1_13255248
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13259056 id: CP020786.1_13259056
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13262645 id: CP020786.1_13262645
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13265671 id: CP020786.1_13265671
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13265848 id: CP020786.1_13265848
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13266198 id: CP020786.1_13266198
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13267345 id: CP020786.1_13267345
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13267354 id: CP020786.1_13267354
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13267402 id: CP020786.1_13267402
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13268072 id: CP020786.1_13268072
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13268860 id: CP020786.1_13268860
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13269326 id: CP020786.1_13269326
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13269775 id: CP020786.1_13269775
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13269887 id: CP020786.1_13269887
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13270062 id: CP020786.1_13270062
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13270100 id: CP020786.1_13270100
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13270225 id: CP020786.1_13270225
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13270477 id: CP020786.1_13270477
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13270749 id: CP020786.1_13270749
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13271653 id: CP020786.1_13271653
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13271964 id: CP020786.1_13271964
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13273507 id: CP020786.1_13273507
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13274762 id: CP020786.1_13274762
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13277058 id: CP020786.1_13277058
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13277074 id: CP020786.1_13277074
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13277380 id: CP020786.1_13277380
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13281489 id: CP020786.1_13281489
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13281606 id: CP020786.1_13281606
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13281946 id: CP020786.1_13281946
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13281998 id: CP020786.1_13281998
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13525621 id: CP020786.1_13525621
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13527796 id: CP020786.1_13527796
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13528115 id: CP020786.1_13528115
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13532486 id: CP020786.1_13532486
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13533523 id: CP020786.1_13533523
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13542110 id: CP020786.1_13542110
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13545875 id: CP020786.1_13545875
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13546284 id: CP020786.1_13546284
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13547745 id: CP020786.1_13547745
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13548759 id: CP020786.1_13548759
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13554304 id: CP020786.1_13554304
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13554666 id: CP020786.1_13554666
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13554679 id: CP020786.1_13554679
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13554754 id: CP020786.1_13554754
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13555091 id: CP020786.1_13555091
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13555509 id: CP020786.1_13555509
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13557383 id: CP020786.1_13557383
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13558530 id: CP020786.1_13558530
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13566207 id: CP020786.1_13566207
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13567945 id: CP020786.1_13567945
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13571464 id: CP020786.1_13571464
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13572941 id: CP020786.1_13572941
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13574505 id: CP020786.1_13574505
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13577288 id: CP020786.1_13577288
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13578890 id: CP020786.1_13578890
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13588766 id: CP020786.1_13588766
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13589311 id: CP020786.1_13589311
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13589432 id: CP020786.1_13589432
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13590187 id: CP020786.1_13590187
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13591940 id: CP020786.1_13591940
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13592811 id: CP020786.1_13592811
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13593117 id: CP020786.1_13593117
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13594648 id: CP020786.1_13594648
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13595106 id: CP020786.1_13595106
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13596068 id: CP020786.1_13596068
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13597886 id: CP020786.1_13597886
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13598764 id: CP020786.1_13598764
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13601750 id: CP020786.1_13601750
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13606320 id: CP020786.1_13606320
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13607111 id: CP020786.1_13607111
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13609642 id: CP020786.1_13609642
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13609867 id: CP020786.1_13609867
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13616398 id: CP020786.1_13616398
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13616654 id: CP020786.1_13616654
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13616664 id: CP020786.1_13616664
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13623437 id: CP020786.1_13623437
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13634409 id: CP020786.1_13634409
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13635331 id: CP020786.1_13635331
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13635723 id: CP020786.1_13635723
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13638114 id: CP020786.1_13638114
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13638162 id: CP020786.1_13638162
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13640033 id: CP020786.1_13640033
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13648259 id: CP020786.1_13648259
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13649574 id: CP020786.1_13649574
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13649577 id: CP020786.1_13649577
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13652414 id: CP020786.1_13652414
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13653019 id: CP020786.1_13653019
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13655898 id: CP020786.1_13655898
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13656101 id: CP020786.1_13656101
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13657941 id: CP020786.1_13657941
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13658602 id: CP020786.1_13658602
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13658733 id: CP020786.1_13658733
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13659913 id: CP020786.1_13659913
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13662322 id: CP020786.1_13662322
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13663934 id: CP020786.1_13663934
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13664019 id: CP020786.1_13664019
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13664021 id: CP020786.1_13664021
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13664238 id: CP020786.1_13664238
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13664571 id: CP020786.1_13664571
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13665688 id: CP020786.1_13665688
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13676206 id: CP020786.1_13676206
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13676267 id: CP020786.1_13676267
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13677168 id: CP020786.1_13677168
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13680537 id: CP020786.1_13680537
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13692802 id: CP020786.1_13692802
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13694613 id: CP020786.1_13694613
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13695398 id: CP020786.1_13695398
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13698336 id: CP020786.1_13698336
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13713565 id: CP020786.1_13713565
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13715037 id: CP020786.1_13715037
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13721435 id: CP020786.1_13721435
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13724866 id: CP020786.1_13724866
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13725568 id: CP020786.1_13725568
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13727218 id: CP020786.1_13727218
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13730614 id: CP020786.1_13730614
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13730665 id: CP020786.1_13730665
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13731846 id: CP020786.1_13731846
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13731847 id: CP020786.1_13731847
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13731962 id: CP020786.1_13731962
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13733307 id: CP020786.1_13733307
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13733938 id: CP020786.1_13733938
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13740967 id: CP020786.1_13740967
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13743951 id: CP020786.1_13743951
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13757352 id: CP020786.1_13757352
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13759054 id: CP020786.1_13759054
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13768402 id: CP020786.1_13768402
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13773513 id: CP020786.1_13773513
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13779828 id: CP020786.1_13779828
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13780141 id: CP020786.1_13780141
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13781307 id: CP020786.1_13781307
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13792099 id: CP020786.1_13792099
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13797646 id: CP020786.1_13797646
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13798309 id: CP020786.1_13798309
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13803936 id: CP020786.1_13803936
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13804279 id: CP020786.1_13804279
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13804439 id: CP020786.1_13804439
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13806389 id: CP020786.1_13806389
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13817062 id: CP020786.1_13817062
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13866663 id: CP020786.1_13866663
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13866664 id: CP020786.1_13866664
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13867131 id: CP020786.1_13867131
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13868479 id: CP020786.1_13868479
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13868623 id: CP020786.1_13868623
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13869504 id: CP020786.1_13869504
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13869772 id: CP020786.1_13869772
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13872634 id: CP020786.1_13872634
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13872640 id: CP020786.1_13872640
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13894875 id: CP020786.1_13894875
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13894959 id: CP020786.1_13894959
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13895013 id: CP020786.1_13895013
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13898639 id: CP020786.1_13898639
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13899950 id: CP020786.1_13899950
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13900508 id: CP020786.1_13900508
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13901044 id: CP020786.1_13901044
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13901486 id: CP020786.1_13901486
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13902341 id: CP020786.1_13902341
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13902576 id: CP020786.1_13902576
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13905244 id: CP020786.1_13905244
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13905367 id: CP020786.1_13905367
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13916371 id: CP020786.1_13916371
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13920499 id: CP020786.1_13920499
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13920778 id: CP020786.1_13920778
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13927973 id: CP020786.1_13927973
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13929383 id: CP020786.1_13929383
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13929385 id: CP020786.1_13929385
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13931402 id: CP020786.1_13931402
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13933775 id: CP020786.1_13933775
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13939713 id: CP020786.1_13939713
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13944121 id: CP020786.1_13944121
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13949790 id: CP020786.1_13949790
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13950900 id: CP020786.1_13950900
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13951799 id: CP020786.1_13951799
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13953764 id: CP020786.1_13953764
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13953766 id: CP020786.1_13953766
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13979942 id: CP020786.1_13979942
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13981345 id: CP020786.1_13981345
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 13981729 id: CP020786.1_13981729
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14041875 id: CP020786.1_14041875
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14070958 id: CP020786.1_14070958
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14075159 id: CP020786.1_14075159
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14076965 id: CP020786.1_14076965
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14101849 id: CP020786.1_14101849
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14109470 id: CP020786.1_14109470
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14110251 id: CP020786.1_14110251
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14161303 id: CP020786.1_14161303
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14204466 id: CP020786.1_14204466
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14207344 id: CP020786.1_14207344
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14207386 id: CP020786.1_14207386
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14208065 id: CP020786.1_14208065
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14208235 id: CP020786.1_14208235
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14208287 id: CP020786.1_14208287
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14221729 id: CP020786.1_14221729
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14224505 id: CP020786.1_14224505
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14228526 id: CP020786.1_14228526
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14228559 id: CP020786.1_14228559
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14236527 id: CP020786.1_14236527
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14238037 id: CP020786.1_14238037
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14238039 id: CP020786.1_14238039
+WARNING: Reached a gap of 243623bp > 200000bp. Skipping calculation at position 14286310 id: CP020786.1_14286310
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 23704289 id: CP020786.1_23704289
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 23942606 id: CP020786.1_23942606
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24072748 id: CP020786.1_24072748
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24074560 id: CP020786.1_24074560
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24077640 id: CP020786.1_24077640
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24085234 id: CP020786.1_24085234
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24102644 id: CP020786.1_24102644
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24135622 id: CP020786.1_24135622
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24135793 id: CP020786.1_24135793
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24137210 id: CP020786.1_24137210
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24196257 id: CP020786.1_24196257
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24207304 id: CP020786.1_24207304
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24211113 id: CP020786.1_24211113
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24218285 id: CP020786.1_24218285
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24256936 id: CP020786.1_24256936
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24261597 id: CP020786.1_24261597
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24262215 id: CP020786.1_24262215
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24262321 id: CP020786.1_24262321
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24262323 id: CP020786.1_24262323
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24265443 id: CP020786.1_24265443
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24290050 id: CP020786.1_24290050
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24292030 id: CP020786.1_24292030
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24298950 id: CP020786.1_24298950
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24298968 id: CP020786.1_24298968
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24316617 id: CP020786.1_24316617
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24316644 id: CP020786.1_24316644
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24318100 id: CP020786.1_24318100
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24329667 id: CP020786.1_24329667
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24329685 id: CP020786.1_24329685
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24343733 id: CP020786.1_24343733
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24343737 id: CP020786.1_24343737
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24345088 id: CP020786.1_24345088
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24353314 id: CP020786.1_24353314
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24359085 id: CP020786.1_24359085
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24367183 id: CP020786.1_24367183
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24375223 id: CP020786.1_24375223
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24393113 id: CP020786.1_24393113
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24394226 id: CP020786.1_24394226
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24394228 id: CP020786.1_24394228
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24397300 id: CP020786.1_24397300
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24397365 id: CP020786.1_24397365
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24397625 id: CP020786.1_24397625
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24408320 id: CP020786.1_24408320
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24416895 id: CP020786.1_24416895
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24422974 id: CP020786.1_24422974
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24424882 id: CP020786.1_24424882
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24424890 id: CP020786.1_24424890
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24435540 id: CP020786.1_24435540
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24456447 id: CP020786.1_24456447
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24470057 id: CP020786.1_24470057
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24470419 id: CP020786.1_24470419
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24470504 id: CP020786.1_24470504
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24477724 id: CP020786.1_24477724
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24477774 id: CP020786.1_24477774
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24484981 id: CP020786.1_24484981
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24485407 id: CP020786.1_24485407
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24485426 id: CP020786.1_24485426
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24487696 id: CP020786.1_24487696
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24492527 id: CP020786.1_24492527
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24492560 id: CP020786.1_24492560
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24492685 id: CP020786.1_24492685
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24492695 id: CP020786.1_24492695
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24493191 id: CP020786.1_24493191
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24495328 id: CP020786.1_24495328
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24497116 id: CP020786.1_24497116
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24497120 id: CP020786.1_24497120
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24509647 id: CP020786.1_24509647
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24511034 id: CP020786.1_24511034
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24517306 id: CP020786.1_24517306
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24517400 id: CP020786.1_24517400
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24520041 id: CP020786.1_24520041
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24520044 id: CP020786.1_24520044
+WARNING: Reached chromosome edge before EHH decayed below 0.05. Skipping calculation at position 24520060 id: CP020786.1_24520060
