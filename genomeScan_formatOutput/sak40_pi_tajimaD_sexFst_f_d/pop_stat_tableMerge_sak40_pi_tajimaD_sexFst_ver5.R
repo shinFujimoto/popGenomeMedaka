@@ -13,8 +13,8 @@
 library("tidyverse")
 library("ggplot2")
 #source("D:/GoogleDrive/lib/population_statistics_summary.R") # self-made functions to make the 
-setwd("C:/Users/fujim/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
-setwd("D:/GoogleDrive/study/Ëœ_â€¢Â¶Å’Â´Âe/0_medakaPopGenomics/DatasetAndScript/genomescan")
+setwd("C:/Users/fujim/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
+setwd("D:/GoogleDrive/study/˜_•¶Œ´e/0_medakaPopGenomics/DatasetAndScript/genomescan")
 source("formatting_output/scripts/population_statistics_summary.R") # self-made functions
 
 # ------------------------------------------------------------------------------
